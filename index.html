@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<head>  
+<meta charset="UTF-8">  
+<title>ARIMA Prediction</title>  
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">  </head>  
+<body background="https://lh5.googleusercontent.com/proxy/4vbIAzfLtz2eDbQMOoU-AIu5sDST-dHmm9vaxN3VQyBjjH11o4VUWF4QEQfIO8oZ4a5Zy1lXDGSKWlIrDnokEATdPiNz4ho4beHMDhCPltozmdnc5Cac69cVH3WvIUJEF7M=s0-d">
+<div class="login"> 
+    <h1 style="text-align:center">ARIMA Prediction</h1> 
+   
+    <form action="{{ url_for('predict')}}"method="post"> 
+    <h2 style="text-align:center;">Predict the next N periods(steps)</h2> 
+    <p style="text-align:center;"><input type="number" style="font-size: 18pt; height: 30px; width:280px; " placeholder="No of steps" name="Steps"  required="required" min="1" max="24" /></p>  
+    
+  
+   
+   <h3 style="text-align:center;"></h3>         
+   <p style="text-align:center;"><button style="background:#3630a3;color:white;" type="submit" class="btn btn-primary btn-block btn-large">OUTPUT</button></p>  
+  </form>   <h2 style="text-align:center;"><br>{{ prediction_text }}</h2>  
+</div>
+</body>
+</html>
